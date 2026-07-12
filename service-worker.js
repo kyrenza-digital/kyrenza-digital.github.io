@@ -1,4 +1,4 @@
-const CACHE = 'kyrenza-v3';
+const CACHE = 'kyrenza-v5-mobile';
 const ASSETS = [
   './',
   './index.html',
@@ -6,6 +6,8 @@ const ASSETS = [
   './script.js',
   './manifest.webmanifest',
   './assets/kyrenza-mark.png',
+  './assets/kyrenza-icon-192.png',
+  './assets/kyrenza-icon-512.png',
   './assets/kyrenza-logo-transparent.png',
   './assets/hero-workspace.svg',
   './assets/service-collage.svg'

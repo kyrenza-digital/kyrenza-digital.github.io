@@ -177,3 +177,38 @@ footer{padding:62px 0 24px;border-top:1px solid var(--line);background:#020202}
 .window-lines i:nth-child(2){width:80%}
 .window-lines i:nth-child(3){width:58%;background:#351010}
 @media(max-width:850px){.app-download-card{grid-template-columns:1fr;padding:38px 26px;gap:38px}.app-preview{min-height:270px}.app-features{display:grid}.app-download-button{width:100%;text-align:center}}
+
+
+/* Geräteübergreifender App-Download */
+.app-heading{margin-bottom:42px}
+.platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.platform-card{position:relative;display:flex;flex-direction:column;min-height:520px;padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(160deg,#101010,#070707);box-shadow:0 24px 70px rgba(0,0,0,.28);transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+.platform-card:hover,.platform-card.recommended{transform:translateY(-5px);border-color:#6b1b1b;box-shadow:0 28px 80px rgba(0,0,0,.44),0 0 0 1px rgba(139,0,0,.2)}
+.platform-card.recommended::before{content:"Für dein Gerät";position:absolute;right:18px;top:-12px;padding:6px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:9px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}
+.platform-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.platform-icon{display:grid;place-items:center;width:58px;height:58px;border:1px solid #3a1b1b;border-radius:16px;background:rgba(139,0,0,.14)}
+.platform-icon svg{width:30px;height:30px;fill:#fff}
+.platform-badge{color:#d64d4d;font-size:10px;font-weight:850;letter-spacing:.16em}
+.platform-card h3{margin:0 0 13px;font-size:25px}
+.platform-card>p{margin:0 0 22px;color:var(--muted)}
+.platform-card ul{display:grid;gap:11px;margin:0 0 28px;padding:0;list-style:none;color:#d2d2d2;font-size:14px}
+.platform-card li::before{content:"✓";margin-right:9px;color:#d04a4a;font-weight:800}
+.platform-button{width:100%;margin-top:auto;text-align:center}
+.platform-note{display:block;min-height:34px;margin-top:14px;color:#777;font-size:11px;line-height:1.5;text-align:center}
+.install-modal[hidden]{display:none}
+.install-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:18px}
+.install-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(7px)}
+.install-dialog{position:relative;z-index:1;width:min(100%,520px);padding:34px;border:1px solid #3a2020;border-radius:24px;background:#101010;box-shadow:0 35px 120px rgba(0,0,0,.75)}
+.install-close{position:absolute;right:16px;top:13px;width:38px;height:38px;border:0;border-radius:50%;background:#202020;color:#fff;font-size:25px;cursor:pointer}
+.install-close:hover{background:#2a2a2a}
+.install-dialog-mark{display:grid;place-items:center;width:70px;height:70px;margin-bottom:20px;border:1px solid #431b1b;border-radius:20px;background:rgba(139,0,0,.16)}
+.install-dialog-mark img{width:42px;height:48px;object-fit:contain}
+.install-dialog h2{margin:10px 0 18px;font-size:32px}
+.install-dialog p{color:var(--muted)}
+.install-steps{display:grid;gap:13px;margin:24px 0;padding:0;counter-reset:install;list-style:none}
+.install-steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;color:#e4e4e4}
+.install-steps li::before{counter-increment:install;content:counter(install);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);font-size:12px;font-weight:800}
+.install-share-icon{display:inline-grid;place-items:center;width:24px;height:24px;margin:0 4px;border:1px solid #555;border-radius:6px;font-weight:800}
+body.modal-open{overflow:hidden}
+@media(max-width:980px){.platform-grid{grid-template-columns:1fr}.platform-card{min-height:auto}.platform-card:hover{transform:none}}
+@media(max-width:680px){.platform-card{padding:24px}.install-dialog{padding:28px 22px}.install-dialog h2{font-size:28px}}

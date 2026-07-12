@@ -1,0 +1,19 @@
+KYRENZA APP-UPDATE – ANDROID, IPHONE UND WINDOWS
+
+Diese Dateien bei GitHub hochladen und gleichnamige Dateien ersetzen:
+- index.html
+- styles.css
+- script.js
+- service-worker.js
+- manifest.webmanifest
+- assets/kyrenza-icon-192.png
+- assets/kyrenza-icon-512.png
+
+GitHub: https://github.com/kyrenza-digital/kyrenza-digital.github.io
+Dann: Add file > Upload files > alle Dateien hochladen > Commit changes.
+Anschließend 2–5 Minuten warten und die Seite mit Strg+F5 neu laden.
+
+Danach zeigt die Seite drei Auswahlmöglichkeiten:
+- Android installieren
+- iPhone hinzufügen
+- Windows herunterladen
