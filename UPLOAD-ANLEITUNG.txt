@@ -1,0 +1,38 @@
+KYRENZA kostenlos mit GitHub Pages veröffentlichen
+
+GitHub-Benutzername: kyrenza-digital
+Repository-Name: kyrenza-digital.github.io
+Spätere Webadresse: https://kyrenza-digital.github.io/
+
+TEIL 1 – REPOSITORY ERSTELLEN
+1. Bei GitHub anmelden.
+2. Oben rechts auf das Pluszeichen und anschließend auf "New repository" klicken.
+3. Repository name: kyrenza-digital.github.io
+4. "Public" auswählen.
+5. Auf "Create repository" klicken.
+
+TEIL 2 – WEBSEITENDATEIEN HOCHLADEN
+1. Im neuen Repository auf "uploading an existing file" oder "Add file" > "Upload files" klicken.
+2. Alle Inhalte aus diesem Ordner hochladen – nicht den übergeordneten ZIP-Ordner.
+3. Unten auf "Commit changes" klicken.
+
+TEIL 3 – GITHUB PAGES AKTIVIEREN
+1. Repository > Settings > Pages öffnen.
+2. Unter "Build and deployment" bei Source "Deploy from a branch" wählen.
+3. Branch "main" und Ordner "/ (root)" wählen.
+4. Auf "Save" klicken.
+5. Nach einigen Minuten ist die Seite unter https://kyrenza-digital.github.io/ erreichbar.
+
+TEIL 4 – WINDOWS-APP ALS DOWNLOAD HOCHLADEN
+1. Im Repository rechts auf "Releases" klicken.
+2. "Draft a new release" wählen.
+3. Einen neuen Tag "v1.0.0" anlegen.
+4. Release title: KYRENZA Windows-App v1.0.0
+5. Die Datei KYRENZA-App-v3-Windows.exe unten als Datei anhängen.
+6. "Publish release" klicken.
+
+WICHTIG
+Der Download-Button der Webseite ist bereits auf genau diesen Release-Dateinamen eingerichtet:
+KYRENZA-App-v3-Windows.exe
+
+Das Kontaktformular versendet aktuell noch keine echten E-Mails. Vor einer geschäftlichen Veröffentlichung müssen Impressum, Datenschutz und echte Kontaktdaten ergänzt werden.
