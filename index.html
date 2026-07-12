@@ -4,21 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="KYRENZA">
-  <meta name="description" content="KYRENZA – professionelle Unterstützung für Bewerbungen, Texte, digitale Dokumente und individuelle Projekte. Als App auf Android, iPhone und Windows nutzen.">
+  <meta name="description" content="KYRENZA – professionelle Unterstützung für Bewerbungen, Texte, digitale Dokumente und individuelle Projekte. Windows-App kostenlos herunterladen.">
   <link rel="canonical" href="https://kyrenza-digital.github.io/">
   <meta property="og:title" content="KYRENZA – Digitale Lösungen">
-  <meta property="og:description" content="Professionelle digitale Unterstützung und die KYRENZA-App für Android, iPhone und Windows.">
+  <meta property="og:description" content="Professionelle digitale Unterstützung und die kostenlose KYRENZA-App für Windows.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kyrenza-digital.github.io/">
   <meta property="og:image" content="https://kyrenza-digital.github.io/assets/kyrenza-logo-cropped.png">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="assets/kyrenza-icon-192.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/kyrenza-icon-192.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest?v=mobile-fix-2">
+  <link rel="icon" href="assets/kyrenza-mark.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=mobile-fix-2">
   <title>KYRENZA – Digitale Lösungen</title>
+
+  <style>
+    .kyrenza-platform-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+      margin-top:34px;
+    }
+    .kyrenza-platform-card{
+      background:#121212;
+      border:1px solid #1E1E1E;
+      border-radius:22px;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .kyrenza-platform-card:hover,
+    .kyrenza-platform-card.is-device{
+      transform:translateY(-4px);
+      border-color:#8B0000;
+      box-shadow:0 16px 44px rgba(139,0,0,.22);
+    }
+    .kyrenza-platform-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:22px;
+    }
+    .kyrenza-platform-icon{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:#8B0000;
+      color:#fff;
+      font-weight:800;
+      font-size:22px;
+    }
+    .kyrenza-platform-badge{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:0 12px;
+      border-radius:999px;
+      background:#1E1E1E;
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.12em;
+    }
+    .kyrenza-platform-card h3{margin:0 0 12px;font-size:25px;color:#fff}
+    .kyrenza-platform-card p{margin:0 0 18px;color:#cfcfcf;line-height:1.65}
+    .kyrenza-platform-card ul{margin:0 0 24px;padding:0;list-style:none;display:grid;gap:9px;color:#fff}
+    .kyrenza-platform-card li::before{content:"✓";color:#A11212;font-weight:800;margin-right:9px}
+    .kyrenza-platform-button{width:100%;margin-top:auto;text-align:center;justify-content:center}
+    .kyrenza-platform-card small{display:block;margin-top:12px;color:#aaa;line-height:1.5}
+    .kyrenza-mobile-help{
+      position:fixed;
+      inset:auto 20px 20px 20px;
+      z-index:9999;
+      max-width:620px;
+      margin:auto;
+      background:#121212;
+      border:1px solid #8B0000;
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 24px 80px rgba(0,0,0,.72);
+    }
+    .kyrenza-mobile-help[hidden]{display:none}
+    .kyrenza-mobile-help h3{margin:16px 0 14px;color:#fff;font-size:26px}
+    .kyrenza-mobile-help ol{margin:0;padding-left:22px;color:#fff;line-height:1.75}
+    .kyrenza-mobile-help p{color:#cfcfcf;line-height:1.65}
+    .kyrenza-help-close{
+      position:absolute;
+      right:14px;
+      top:12px;
+      border:0;
+      background:transparent;
+      color:#fff;
+      font-size:30px;
+      cursor:pointer;
+    }
+    @media(max-width:900px){
+      .kyrenza-platform-grid{grid-template-columns:1fr}
+      .kyrenza-platform-card{padding:24px}
+    }
+  </style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt</a>
@@ -48,7 +136,7 @@
           <h1>Deine Idee.<br><em>Professionell umgesetzt.</em></h1>
           <p>KYRENZA unterstützt dich bei Bewerbungen, professionellen Texten und digitalen Projekten – klar, individuell und ohne unnötige Umwege.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#app">App installieren</a>
+            <a class="button primary" href="#app">Windows-App herunterladen</a>
             <a class="button secondary" href="#leistungen">Leistungen entdecken</a>
           </div>
           <div class="hero-metrics">
@@ -175,62 +263,82 @@
       </div>
     </section>
 
-
     <section class="section app-section" id="app">
       <div class="container">
-        <div class="section-heading app-heading reveal">
-          <div><span class="section-number">05</span><p>KYRENZA-APP</p></div>
-          <h2>Auf deinem Gerät.<br>Mit einem Klick.</h2>
-          <p>Wähle dein Gerät. Auf Android und iPhone wird KYRENZA direkt zum Startbildschirm hinzugefügt. Auf Windows lädst du die Desktop-App herunter.</p>
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label"><span>05</span> APP INSTALLIEREN</div>
+            <h2>KYRENZA auf deinem Gerät.</h2>
+          </div>
+          <p>Wähle dein Gerät. Android und iPhone nutzen die mobile Web-App; auf Windows steht zusätzlich die Desktop-App bereit.</p>
         </div>
 
-        <div class="platform-grid">
-          <article class="platform-card reveal" data-platform="android">
-            <div class="platform-top">
-              <div class="platform-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7.2 8.2h9.6c.7 0 1.2.5 1.2 1.2v7.2c0 .7-.5 1.2-1.2 1.2h-.8v2a1 1 0 0 1-2 0v-2h-4v2a1 1 0 0 1-2 0v-2h-.8A1.2 1.2 0 0 1 6 16.6V9.4c0-.7.5-1.2 1.2-1.2ZM5 9.3a1 1 0 0 1 1 1v5.3a1 1 0 1 1-2 0v-5.3a1 1 0 0 1 1-1Zm14 0a1 1 0 0 1 1 1v5.3a1 1 0 1 1-2 0v-5.3a1 1 0 0 1 1-1ZM8.4 4.1 7.5 2.6a.6.6 0 1 1 1-.6l1 1.7a7.6 7.6 0 0 1 5 0l1-1.7a.6.6 0 1 1 1 .6l-.9 1.5A5.2 5.2 0 0 1 18 7H6a5.2 5.2 0 0 1 2.4-2.9ZM9 5.3a.7.7 0 1 0 0 1.4.7.7 0 0 0 0-1.4Zm6 0a.7.7 0 1 0 0 1.4.7.7 0 0 0 0-1.4Z"/></svg>
-              </div>
-              <span class="platform-badge">ANDROID</span>
+        <div class="kyrenza-platform-grid">
+          <article class="kyrenza-platform-card" id="androidCard">
+            <div class="kyrenza-platform-top">
+              <span class="kyrenza-platform-icon">A</span>
+              <span class="kyrenza-platform-badge">ANDROID</span>
             </div>
             <h3>Für Android installieren</h3>
-            <p>Öffne KYRENZA in Chrome und installiere die Web-App direkt auf deinem Startbildschirm.</p>
-            <ul><li>Eigenes App-Symbol</li><li>Start wie eine normale App</li><li>Kein Play Store nötig</li></ul>
-            <button class="button primary platform-button" id="androidInstallButton" type="button">Android-App installieren</button>
-            <small class="platform-note" id="androidInstallNote">Am besten mit Google Chrome öffnen.</small>
+            <p>Öffne KYRENZA in Google Chrome und füge die App direkt zu deinem Startbildschirm hinzu.</p>
+            <ul>
+              <li>App-Symbol auf dem Handy</li>
+              <li>Öffnet sich wie eine App</li>
+              <li>Kostenlos</li>
+            </ul>
+            <button class="button primary kyrenza-platform-button" id="androidInstallButton" type="button">
+              Android-App installieren
+            </button>
+            <small id="androidInstallNote">Am besten in Google Chrome öffnen.</small>
           </article>
 
-          <article class="platform-card reveal" data-platform="ios">
-            <div class="platform-top">
-              <div class="platform-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M16.7 12.8c0-2.2 1.8-3.3 1.9-3.4a4.1 4.1 0 0 0-3.2-1.8c-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-3-.8a4.5 4.5 0 0 0-3.8 2.3c-1.6 2.8-.4 7 1.2 9.2.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3.1-.7 1.4 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.9-1.1-2.9-3.7Zm-2.2-6.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3Z"/></svg>
-              </div>
-              <span class="platform-badge">IPHONE</span>
+          <article class="kyrenza-platform-card" id="iphoneCard">
+            <div class="kyrenza-platform-top">
+              <span class="kyrenza-platform-icon">i</span>
+              <span class="kyrenza-platform-badge">IPHONE</span>
             </div>
             <h3>Für iPhone hinzufügen</h3>
-            <p>Öffne KYRENZA in Safari und füge die App mit wenigen Schritten zum Home-Bildschirm hinzu.</p>
-            <ul><li>App-Symbol auf dem Home-Bildschirm</li><li>Vollbild-App-Ansicht</li><li>Kein App Store nötig</li></ul>
-            <button class="button primary platform-button" id="iosInstallButton" type="button">iPhone-Anleitung öffnen</button>
-            <small class="platform-note">Die Installation erfolgt über Safari.</small>
+            <p>Öffne KYRENZA in Safari und füge die App über das Teilen-Menü zum Home-Bildschirm hinzu.</p>
+            <ul>
+              <li>App-Symbol auf dem iPhone</li>
+              <li>Keine Store-Anmeldung nötig</li>
+              <li>Kostenlos</li>
+            </ul>
+            <button class="button primary kyrenza-platform-button" id="iosInstallButton" type="button">
+              iPhone-Anleitung öffnen
+            </button>
+            <small>Die Installation erfolgt über Safari.</small>
           </article>
 
-          <article class="platform-card reveal" data-platform="windows">
-            <div class="platform-top">
-              <div class="platform-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M3 4.2 10.7 3v8.2H3V4.2Zm8.7-1.4L21 1.5v9.7h-9.3V2.8ZM3 12.2h7.7V20L3 18.9v-6.7Zm8.7 0H21v10.3l-9.3-1.3v-9Z"/></svg>
-              </div>
-              <span class="platform-badge">WINDOWS</span>
+          <article class="kyrenza-platform-card" id="windowsCard">
+            <div class="kyrenza-platform-top">
+              <span class="kyrenza-platform-icon">W</span>
+              <span class="kyrenza-platform-badge">WINDOWS</span>
             </div>
-            <h3>Für PC herunterladen</h3>
-            <p>Lade die eigenständige Windows-Version für PC oder Laptop direkt herunter.</p>
-            <ul><li>Eine einzelne EXE-Datei</li><li>Für Windows 10 und 11</li><li>Kostenloser Download</li></ul>
-            <a class="button primary platform-button" href="https://github.com/kyrenza-digital/kyrenza-digital.github.io/releases/latest/download/KYRENZA-App-v3-Windows.exe">Windows-App herunterladen</a>
-            <small class="platform-note">Windows kann beim ersten Start eine Sicherheitsabfrage anzeigen.</small>
+            <h3>Für Windows herunterladen</h3>
+            <p>Lade die eigenständige KYRENZA-App für PC oder Laptop herunter.</p>
+            <ul>
+              <li>Eine einzelne EXE-Datei</li>
+              <li>Für Windows 10 und 11</li>
+              <li>Kostenloser Download</li>
+            </ul>
+            <a class="button primary kyrenza-platform-button" href="https://github.com/kyrenza-digital/kyrenza-digital.github.io/releases/latest/download/KYRENZA-App-v3-Windows.exe">
+              Windows-App herunterladen
+            </a>
+            <small>Windows kann beim ersten Start eine Sicherheitsabfrage anzeigen.</small>
           </article>
+        </div>
+
+        <div class="kyrenza-mobile-help" id="mobileHelp" hidden>
+          <button type="button" class="kyrenza-help-close" id="mobileHelpClose" aria-label="Schließen">×</button>
+          <span class="kyrenza-platform-badge" id="mobileHelpBadge">APP</span>
+          <h3 id="mobileHelpTitle">KYRENZA installieren</h3>
+          <div id="mobileHelpContent"></div>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="kontakt">
+<section class="section contact-section" id="kontakt">
       <div class="container contact-grid">
         <div class="contact-copy reveal">
           <div class="section-label"><span>06</span> KONTAKT</div>
@@ -268,19 +376,74 @@
     <div class="container footer-bottom">© <span id="year"></span> KYRENZA. Alle Rechte vorbehalten.</div>
   </footer>
 
+  <script src="script.js?v=mobile-fix-2"></script>
 
-  <div class="install-modal" id="installModal" hidden>
-    <div class="install-modal-backdrop" data-close-install></div>
-    <section class="install-dialog" role="dialog" aria-modal="true" aria-labelledby="installModalTitle">
-      <button class="install-close" type="button" aria-label="Fenster schließen" data-close-install>×</button>
-      <div class="install-dialog-mark"><img src="assets/kyrenza-mark.png" alt=""></div>
-      <span class="platform-badge" id="installModalBadge">APP</span>
-      <h2 id="installModalTitle">KYRENZA installieren</h2>
-      <div id="installModalContent"></div>
-      <button class="button primary full" type="button" data-close-install>Verstanden</button>
-    </section>
-  </div>
+  <script>
+    (() => {
+      const ua = navigator.userAgent || "";
+      const isAndroid = /Android/i.test(ua);
+      const isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      const isWindows = /Windows/i.test(ua);
 
-  <script src="script.js"></script>
+      if (isAndroid) document.getElementById("androidCard")?.classList.add("is-device");
+      if (isIOS) document.getElementById("iphoneCard")?.classList.add("is-device");
+      if (isWindows) document.getElementById("windowsCard")?.classList.add("is-device");
+
+      let installPrompt = null;
+      const androidButton = document.getElementById("androidInstallButton");
+      const androidNote = document.getElementById("androidInstallNote");
+      const help = document.getElementById("mobileHelp");
+      const helpBadge = document.getElementById("mobileHelpBadge");
+      const helpTitle = document.getElementById("mobileHelpTitle");
+      const helpContent = document.getElementById("mobileHelpContent");
+
+      const showHelp = (type) => {
+        if (!help || !helpBadge || !helpTitle || !helpContent) return;
+        if (type === "ios") {
+          helpBadge.textContent = "IPHONE";
+          helpTitle.textContent = "KYRENZA auf dem iPhone hinzufügen";
+          helpContent.innerHTML = `
+            <ol>
+              <li>Öffne diese Seite unbedingt in <strong>Safari</strong>.</li>
+              <li>Tippe unten auf das <strong>Teilen-Symbol</strong>.</li>
+              <li>Wähle <strong>„Zum Home-Bildschirm“</strong>.</li>
+              <li>Tippe oben rechts auf <strong>„Hinzufügen“</strong>.</li>
+            </ol>`;
+        } else {
+          helpBadge.textContent = "ANDROID";
+          helpTitle.textContent = "KYRENZA auf Android installieren";
+          helpContent.innerHTML = `
+            <ol>
+              <li>Öffne diese Seite in <strong>Google Chrome</strong>.</li>
+              <li>Tippe oben rechts auf die drei Punkte.</li>
+              <li>Wähle <strong>„App installieren“</strong> oder <strong>„Zum Startbildschirm hinzufügen“</strong>.</li>
+              <li>Bestätige die Installation.</li>
+            </ol>`;
+        }
+        help.hidden = false;
+      };
+
+      window.addEventListener("beforeinstallprompt", (event) => {
+        event.preventDefault();
+        installPrompt = event;
+        if (androidButton) androidButton.textContent = "KYRENZA jetzt installieren";
+        if (androidNote) androidNote.textContent = "Die Installation ist auf diesem Gerät bereit.";
+      });
+
+      androidButton?.addEventListener("click", async () => {
+        if (installPrompt) {
+          installPrompt.prompt();
+          await installPrompt.userChoice;
+          installPrompt = null;
+        } else {
+          showHelp("android");
+        }
+      });
+
+      document.getElementById("iosInstallButton")?.addEventListener("click", () => showHelp("ios"));
+      document.getElementById("mobileHelpClose")?.addEventListener("click", () => { help.hidden = true; });
+    })();
+  </script>
+
 </body>
 </html>
