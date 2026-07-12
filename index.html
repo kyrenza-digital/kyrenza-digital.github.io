@@ -209,16 +209,17 @@
             <span>✓ Persönlicher Kontakt</span>
           </div>
         </div>
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mwvgeyaq" method="POST">
+          <input type="hidden" name="_subject" value="Neue KYRENZA-Kundenanfrage">
           <div class="field-row">
             <label><span>Name</span><input name="name" type="text" placeholder="Dein Name" required></label>
             <label><span>E-Mail</span><input name="email" type="email" placeholder="name@beispiel.de" required></label>
           </div>
           <label><span>Gewünschte Leistung</span><select name="service" required><option value="">Bitte auswählen</option><option>Bewerbung</option><option>Text oder E-Mail</option><option>Digitales Projekt</option><option>Sonstiges</option></select></label>
           <label><span>Nachricht</span><textarea name="message" rows="5" placeholder="Wobei brauchst du Unterstützung?" required></textarea></label>
-          <label class="privacy"><input type="checkbox" required><span>Ich stimme der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage zu.</span></label>
+          <label class="privacy"><input type="checkbox" name="datenschutz" value="zugestimmt" required><span>Ich stimme der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage zu.</span></label>
           <button class="button primary full" type="submit">Unverbindliche Anfrage senden</button>
-          <p class="form-status" id="formStatus">Für den echten Versand muss noch deine Empfangs-E-Mail hinterlegt werden.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite">Deine Angaben werden sicher an KYRENZA übermittelt.</p>
         </form>
       </div>
     </section>

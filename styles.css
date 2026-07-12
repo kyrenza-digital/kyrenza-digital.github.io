@@ -135,6 +135,8 @@ details p{margin:-4px 0 24px;color:var(--muted)}
 .privacy input{width:auto;margin-top:4px;accent-color:var(--accent)}
 .form-status{margin:10px 0 0;color:#777;font-size:10px}
 .form-status.success{color:#D44C4C}
+.form-status.error{color:#ff8b8b}
+.contact-form button:disabled{opacity:.65;cursor:wait;transform:none}
 footer{padding:62px 0 24px;border-top:1px solid var(--line);background:#020202}
 .footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:42px}
 .footer-grid>div{display:flex;flex-direction:column;gap:8px;color:#7D7D7D;font-size:13px}
